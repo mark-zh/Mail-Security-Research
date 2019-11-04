@@ -1,19 +1,5 @@
-# Outlook邮箱钓鱼Demo
+# Outlook安全研究实践
 
-### 安全培训写的一个Demo
+[甲方安全建设之office365邮箱弱口令检测](Outlook/brute/README.md)
 
-```
-service apache2 start
-```
-
-### 输入用户名
-![](name.jpg)
-
-### 输入密码
-![](pass.jpg)
-
-### 获取输入结果
-
-利用Ajax发送请求，正则匹配HTTP状态码为404的请求
-
-![](result.jpg)
+[Outlook邮箱钓鱼Demo(安全培训)](Outlook/fish/README.md)

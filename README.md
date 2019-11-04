@@ -1,5 +1,3 @@
 # Mail-Security-Research
 
-[甲方安全建设之office365邮箱弱口令检测](Outlook/brute/)
-
-[Outlook邮箱钓鱼Demo(安全培训)](Outlook/fish/)
+邮箱安全研究实践
